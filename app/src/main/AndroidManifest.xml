@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.kevin.easyaudiorecord">
+    <!-- 网络相关 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 外部存储 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 拍照权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 安装权限 -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" /> <!-- 定位权限（用于 WebView 定位） -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- Android 11 软件包可见性适配：https://www.jianshu.com/p/d1ccd425c4ce -->
+    <uses-permission
+        android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" /> <!-- 此 App 在 GooglePlay 中只会对支持 ARCore 的设备可见 -->
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
+
+    <queries>
+
+        <!-- 拍照意图：MediaStore.ACTION_IMAGE_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+
+        <!-- 拍摄意图：MediaStore.ACTION_VIDEO_CAPTURE -->
+        <intent>
+            <action android:name="android.media.action.VIDEO_CAPTURE" />
+        </intent>
+
+        <!-- 图片裁剪意图 -->
+        <intent>
+            <action android:name="com.android.camera.action.CROP" />
+        </intent>
+
+        <!-- 打电话意图：Intent.ACTION_DIAL -->
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+
+        <!-- 分享意图：Intent.ACTION_SEND -->
+        <intent>
+            <action android:name="android.intent.action.SEND" />
+        </intent>
+
+        <!-- 调起其他页面意图：Intent.ACTION_VIEW -->
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+        </intent>
+    </queries>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EasyAudioRecord"
+        android:usesCleartextTraffic="true"
+        tools:ignore="AllowBackup">
+
+        <!-- 适配 Android 7.0 文件意图 -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+
+        <activity
+            android:name=".ui.ar.ArActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor">
+
+
+        </activity>
+
+        <activity
+            android:name=".ui.home.RecorderActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="fullSensor">
+            <!-- 程序入口 -->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <service
+            android:name="com.kevin.easyaudiorecorder.service.RecorderService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.kevin.easyaudiorecorder.service.ServiceB"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

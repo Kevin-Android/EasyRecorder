@@ -1,0 +1,54 @@
+// androidx 依赖库版本管理
+def androidx = [:]
+androidx.appcompat_version = "1.3.1"
+
+
+
+/**
+ * 仓库地址管理
+ */
+def addRepos(RepositoryHandler handler) {
+    handler.maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    handler.maven { url 'http://maven.aliyun.com/repository/google/' }
+    handler.maven { url 'https://maven.aliyun.com/repository/jcenter/' }
+    handler.maven { url 'https://maven.aliyun.com/repository/public/' }
+    handler.maven { url 'https://jitpack.io' }
+    handler.flatDir { dir new File(rootProject.rootDir, 'third_libs') }
+    handler.mavenCentral()
+    handler.google()
+}
+
+ext.addRepos = this.&addRepos
+
+/**
+ * 读取本机配置(local.properties不会提交到仓库)
+ */
+def readLocalProperty(String propertyName, String defaultValue) {
+    return readProperty('local.properties', propertyName, defaultValue)
+}
+
+ext.readLocalProperty = this.&readLocalProperty
+
+/**
+ * 读取配置(gradle.properties不会提交到仓库)
+ */
+def readGradleProperty(String propertyName, String defaultValue) {
+    return readProperty('gradle.properties', propertyName, defaultValue)
+}
+
+ext.readGradleProperty = this.&readGradleProperty
+
+/**
+ * 读取配置
+ */
+def readProperty(String fileName, String propertyName, String defaultValue) {
+    String result = ""
+    def file = rootProject.file(fileName)
+    if (file.exists() && file.isFile()) {
+        Properties properties = new Properties()
+        properties.load(file.newDataInputStream())
+        result = properties.getProperty(propertyName, defaultValue)
+    }
+    println("result=" + result)
+    return result
+}

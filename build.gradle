@@ -1,0 +1,47 @@
+// 顶级构建文件，您可以在其中添加所有子项目模块通用的配置选项。
+buildscript {
+
+    def kotlin_version = "1.5.20"
+    def google_ar_plugin_version = "1.17.0"
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.3"
+        // 添加kotlin支持
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // 添加google AR 插件
+        classpath "com.google.ar.sceneform:plugin:$google_ar_plugin_version"
+
+        // 注意：不要将您的应用程序依赖项放在这里；
+        // 它们属于单个模块 build.gradle 文件
+    }
+}
+allprojects {
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    tasks.withType(JavaCompile) {
+        // 设置全局编码
+        options.encoding = 'UTF-8'
+    }
+    tasks.withType(Javadoc) {
+        // 设置文档编码
+        options {
+            encoding 'UTF-8'
+            charSet 'UTF-8'
+            links 'http://docs.oracle.com/javase/7/docs/api'
+        }
+    }
+
+    // 将构建文件统一输出到项目根目录下的 build 文件夹
+    setBuildDir(new File(rootDir, "build/${path.replaceAll(':', '/')}"))
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

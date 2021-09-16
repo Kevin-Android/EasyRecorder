@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">EasyAudioRecord</string>
+    <string name="ar_but_0">螳螂</string>
+    <string name="ar_but_1">示例一</string>
+    <string name="ar_but_2">示例二</string>
+
+    <!-- 首页 -->
+    <string name="home_exit_hint">再按一次退出</string>
+    <string name="home_nav_index">首页</string>
+    <string name="home_nav_found">发现</string>
+    <string name="home_nav_message">消息</string>
+    <string name="home_nav_me">我的</string>
+    <string name="service_but">启动service</string>
+</resources>

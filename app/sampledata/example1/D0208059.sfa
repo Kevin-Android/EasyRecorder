@@ -1,0 +1,939 @@
+{
+  materials: [
+    {
+      name: 'cw_M_face',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_bura_00',
+      parameters: [
+        {
+          baseColor: 'cw_t_bura_00_d_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_ssyatu_00',
+      parameters: [
+        {
+          baseColor: 'cw_t_syatu_00_d_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.30151099999999997,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_ribon_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.69999999999999996,
+            0.69999999999999996,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.267982,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_skirtp_00',
+      parameters: [
+        {
+          baseColor: 'cw_t_pskirt_00_d_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.30151099999999997,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_soxh_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.30151099999999997,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_kuturo_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.267982,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_btume_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_btikubiR_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_body_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_barm_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_kmnpb_00',
+      parameters: [
+        {
+          baseColor: 'cw_t_kmnpb_00_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.267982,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_eyekage',
+      parameters: [
+        {
+          baseColor: 'cw_eyekage_',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_eyehikari',
+      parameters: [
+        {
+          baseColor: 'cw_eyehikari_',
+        },
+        {
+          baseColorTint: [
+            1,
+            1,
+            1,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_eye',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.19789599999999999,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'mw_hairbase',
+      parameters: [
+        {
+          baseColor: 'cw_t_hairbase_00_00',
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_ha',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_sita_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_mayuge',
+      parameters: [
+        {
+          baseColor: 'cw_mayuge_00_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_matuge',
+      parameters: [
+        {
+          baseColor: 'cw_matuge_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_kiwa_00_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_04_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_Lside_01_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_03_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_Rside_01_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_02_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_back_00_01',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_01_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_Rside_00_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_02_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_Lside_00_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_03_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_back_00_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_01_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_front_00_01',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_00_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'M_hair_front_00_00',
+      parameters: [
+        {
+          baseColor: 'cw_hair_00_00_00',
+        },
+        {
+          baseColorTint: [
+            0.80000000000000004,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 1,
+        },
+        {
+          roughness: 0.408248,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_pussy_02',
+      parameters: [
+        {
+          baseColor: 'cw_unc_pussy',
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+    {
+      name: 'cw_M_pussy_00',
+      parameters: [
+        {
+          baseColor: null,
+        },
+        {
+          baseColorTint: [
+            1,
+            0.80000000000000004,
+            0.80000000000000004,
+            1,
+          ],
+        },
+        {
+          metallic: 0,
+        },
+        {
+          roughness: 0.28161000000000003,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/obj_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+    ],
+    collision: {},
+    file: 'sampledata/example1/D0208059.obj',
+    name: 'D0208059',
+    recenter: 'root',
+    scale: 0.020292999999999999,
+  },
+  samplers: [
+    {
+      file: 'sampledata/example1/cw_hair_00_00_00.tga',
+      name: 'cw_hair_00_00_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_hair_00_00_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_hair_00_01_00.tga',
+      name: 'cw_hair_00_01_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_hair_00_01_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_t_bura_00_d_00.tga',
+      name: 'cw_t_bura_00_d_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_t_bura_00_d_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_matuge_00.tga',
+      name: 'cw_matuge_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_matuge_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_mayuge_00_00.tga',
+      name: 'cw_mayuge_00_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_mayuge_00_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_t_hairbase_00_00.tga',
+      name: 'cw_t_hairbase_00_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_t_hairbase_00_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_eyehikari_.tga',
+      name: 'cw_eyehikari_',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_eyehikari_.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_hair_00_03_00.tga',
+      name: 'cw_hair_00_03_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_hair_00_03_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_eyekage_.tga',
+      name: 'cw_eyekage_',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_eyekage_.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_t_kmnpb_00_00.tga',
+      name: 'cw_t_kmnpb_00_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_t_kmnpb_00_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_t_pskirt_00_d_00.tga',
+      name: 'cw_t_pskirt_00_d_00',
+      pipeline_name: 'cw_t_pskirt_00_d_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_t_syatu_00_d_00.tga',
+      name: 'cw_t_syatu_00_d_00',
+      pipeline_name: 'cw_t_syatu_00_d_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_unc_pussy.tga',
+      name: 'cw_unc_pussy',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_unc_pussy.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_hair_00_02_00.tga',
+      name: 'cw_hair_00_02_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_hair_00_02_00.tga',
+    },
+    {
+      file: 'sampledata/example1/cw_hair_00_04_00.tga',
+      name: 'cw_hair_00_04_00',
+      params: {
+        usage_type: 'Data',
+      },
+      pipeline_name: 'cw_hair_00_04_00.tga',
+    },
+  ],
+  version: '0.54:2',
+}

@@ -1,0 +1,13 @@
+apply plugin: 'com.android.library'
+apply from: '../config.gradle'
+
+android {
+    defaultConfig {
+        // 模块混淆配置
+        consumerProguardFiles 'proguard-easy-audio-recorder.pro'
+    }
+}
+
+dependencies {
+    implementation 'com.google.ar.sceneform:rendering:1.17.1'
+}
