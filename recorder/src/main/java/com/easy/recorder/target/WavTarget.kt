@@ -1,6 +1,7 @@
-package com.easy.recorder.work
+package com.easy.recorder.target
 
 import com.easy.recorder.source.WaveAudioSource
+import com.easy.recorder.AudioTarget
 import java.io.File
 
 /**
@@ -8,8 +9,8 @@ import java.io.File
  *    @date   : 2023/4/10
  *    @desc   :
  */
-class WaveWorkSource(externalFilesDir: File?, audioSource: WaveAudioSource) : WorkLine() {
-    override fun open() {
+class WavTarget(externalFilesDir: File?, audioSource: WaveAudioSource) : AudioTarget() {
+    override fun load() {
         TODO("Not yet implemented")
     }
 

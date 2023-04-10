@@ -9,16 +9,9 @@ import java.io.File
  *    @date   : 2023/4/10
  *    @desc   :
  */
-class Builder(private val context: Context) {
+class Builder(private val context: Context, private val rootPath: File) {
 
-    private var rootPath = context.getExternalFilesDir("recording")
-
-    fun setRootPath(path: String): Builder {
-        rootPath = context.getExternalFilesDir(path)
-        return this
-    }
-
-    fun getRootPath(): File? {
+    fun getRootPath(): File {
         return rootPath
     }
 

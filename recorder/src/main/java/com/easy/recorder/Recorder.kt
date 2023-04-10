@@ -1,29 +1,35 @@
 package com.easy.recorder
 
 import android.content.Context
-import com.easy.recorder.work.AacWorkSource
+import android.media.MediaRecorder
+import java.io.File
 
-/**
- * @author  康康
- * @date    2023/4/9
- * @desc    录音
- */
 class Recorder(
     private val builder: Builder
 ) {
-
-
     companion object {
-        fun plugin(context: Context): Builder {
-            return Builder(context)
+        fun plugin(context: Context, rootPath: File): Builder {
+            return Builder(context, rootPath)
         }
     }
 
-    fun aac(): AacWorkSource {
-        val aacAudioSource = AudioFormatFactory.provideAacAudioSource()
-        val targetWorkSource =
-            AudioWorkFactory.getTargetWorkSource(builder.getRootPath(), aacAudioSource)
-        return AudioWorkFactory.getTargetWorkSource(builder.getRootPath(), aacAudioSource)
+    @JvmOverloads
+    fun aac(
+        sampleRate: String = "44100",
+        numChannels: Int = 1,
+        samplingRate: Int = MediaRecorder.OutputFormat.DEFAULT
+    ): TargetManage {
+        val aacAudioSource =
+            AudioSourceFactory.provideAacAudioSource(sampleRate, numChannels, samplingRate)
+        val audioTarget = AudioTargetFactory.getAudioTarget(builder.getRootPath(), aacAudioSource)
+        return TargetManage(audioTarget)
     }
+
+    fun wav(): TargetManage {
+        val wavAudioSource = AudioSourceFactory.provideWavAudioSource()
+        val audioTarget = AudioTargetFactory.getAudioTarget(builder.getRootPath(), wavAudioSource)
+        return TargetManage(audioTarget)
+    }
+
 
 }

@@ -1,8 +1,6 @@
 package com.easy.recorder.source
 
-import android.media.AudioRecord
-import android.media.MediaRecorder
-import com.easy.recorder.base.BaseAudioSource
+import com.easy.recorder.AudioSource
 
 /**
  *    @author : 王康
@@ -12,7 +10,7 @@ import com.easy.recorder.base.BaseAudioSource
 class WaveAudioSource(
     override var sampleRate: String = "44100",
     override var numChannels: Int = 1,
-) : BaseAudioSource() {
+) : AudioSource() {
 
 
 }
