@@ -1,8 +1,14 @@
 package com.easy.recorder
 
+import com.easy.recorder.listener.OnRecorderListener
+
 open class AudioTarget {
 
     open fun load() {
+
+    }
+
+    open fun prepare(){
 
     }
 
@@ -14,6 +20,10 @@ open class AudioTarget {
 
     }
 
+    open fun resume() {
+
+    }
+
     open fun stop() {
 
     }
@@ -21,4 +31,8 @@ open class AudioTarget {
     open fun close() {
 
     }
+
+    open fun listener(onRecorderListener: OnRecorderListener) {
+    }
+
 }

@@ -6,6 +6,6 @@ package com.easy.recorder
  *    @desc   :
  */
 abstract class  AudioSource {
-    abstract var sampleRate: String
+    abstract var sampleRate: Int
     abstract var numChannels: Int
 }

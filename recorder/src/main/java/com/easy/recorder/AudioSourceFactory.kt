@@ -14,15 +14,19 @@ class AudioSourceFactory {
     companion object {
 
         fun provideAacAudioSource(
-            sampleRate: String = "44100",
-            numChannels: Int = 1,
-            samplingRate: Int = MediaRecorder.OutputFormat.DEFAULT
+            sampleRate: Int,
+            numChannels: Int,
+            samplingRate: Int
         ): AacAudioSource {
             return AacAudioSource(sampleRate, numChannels, samplingRate)
         }
 
-        fun provideWavAudioSource(): WaveAudioSource {
-            return WaveAudioSource("")
+        fun provideWavAudioSource(
+            sampleRate: Int = 44100,
+            numChannels: Int = 1,
+            samplingRate: Int = MediaRecorder.OutputFormat.DEFAULT
+        ): WaveAudioSource {
+            return WaveAudioSource()
         }
     }
 

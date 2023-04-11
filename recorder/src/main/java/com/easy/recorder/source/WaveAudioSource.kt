@@ -8,7 +8,7 @@ import com.easy.recorder.AudioSource
  *    @desc   :
  */
 class WaveAudioSource(
-    override var sampleRate: String = "44100",
+    override var sampleRate: Int = 44100,
     override var numChannels: Int = 1,
 ) : AudioSource() {
 

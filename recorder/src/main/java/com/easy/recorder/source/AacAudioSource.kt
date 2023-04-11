@@ -9,7 +9,9 @@ import com.easy.recorder.AudioSource
  *    @desc   :
  */
 class AacAudioSource(
-    override var sampleRate: String = "44100",
-    override var numChannels: Int = 1,
-    var samplingRate: Int = MediaRecorder.OutputFormat.DEFAULT
-) : AudioSource()
+    var audioSamplingRate: Int = 44100,
+    var audioChannels: Int = 1,
+    var audioOutputFormat: Int = MediaRecorder.OutputFormat.DEFAULT,
+    var audioEncoder: Int = MediaRecorder.AudioEncoder.DEFAULT,
+    var audioEncodingBitRate: Int = 128000,
+)

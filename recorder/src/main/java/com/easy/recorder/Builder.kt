@@ -2,6 +2,7 @@ package com.easy.recorder
 
 import android.content.Context
 import android.media.MediaRecorder
+import android.os.Environment
 import java.io.File
 
 /**
@@ -9,11 +10,19 @@ import java.io.File
  *    @date   : 2023/4/10
  *    @desc   :
  */
-class Builder(private val context: Context, private val rootPath: File) {
+class Builder(private val context: Context) {
 
-    fun getRootPath(): File {
-        return rootPath
+    var rootPath = context.getExternalFilesDir("recording")
+
+    fun getContext(): Context {
+        return context
     }
+
+    fun setRootPath(filePath: File): Builder {
+        rootPath = filePath
+        return this
+    }
+
 
     fun build(): Recorder {
         return Recorder(this)

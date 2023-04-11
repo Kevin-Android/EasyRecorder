@@ -4,7 +4,6 @@ import com.easy.recorder.source.AacAudioSource
 import com.easy.recorder.source.WaveAudioSource
 import com.easy.recorder.target.AacTarget
 import com.easy.recorder.target.WavTarget
-import java.io.File
 
 /**
  *    @author : 王康
@@ -14,17 +13,17 @@ import java.io.File
 class AudioTargetFactory {
     companion object {
         fun getAudioTarget(
-            externalFilesDir: File,
+            builder: Builder,
             audioSource: AacAudioSource
         ): AacTarget {
-            return AacTarget(externalFilesDir, audioSource)
+            return AacTarget(builder, audioSource)
         }
 
         fun getAudioTarget(
-            externalFilesDir: File?,
+            builder: Builder,
             audioSource: WaveAudioSource
         ): WavTarget {
-            return WavTarget(externalFilesDir, audioSource)
+            return WavTarget(builder, audioSource)
         }
 
     }
