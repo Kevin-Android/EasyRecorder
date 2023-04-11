@@ -1,19 +1,26 @@
 package com.kevin.easyrecorder
 
-import android.media.AudioRecord
-import android.media.MediaRecorder
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
-import com.easy.recorder.AudioFormatFactory
 import com.easy.recorder.Recorder
+import java.io.File
 
 class MainActivity : AppCompatActivity() {
+    private val file: File?
+        get() {
+            return getExternalFilesDir("recording")
+        }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val recorder = Recorder.plugin(this).setRootPath("abc").build()
-        val aac = recorder.aac()
+        val externalFilesDir = file
+        if (externalFilesDir != null) {
+            if (externalFilesDir.exists()){
+                val aac = Recorder.plugin(this, externalFilesDir).build().aac()
+            }
+
+        }
 
 
     }
