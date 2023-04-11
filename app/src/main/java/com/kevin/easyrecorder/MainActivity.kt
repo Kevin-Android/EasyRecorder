@@ -19,11 +19,12 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
     private val tag = "MainActivity"
+    private lateinit var binding: ActivityMainBinding
     private var status = 1
-    private lateinit var recorder: Recorder
-    private lateinit var recorderManage: TargetManage
+    //
+    private lateinit var targetManage: TargetManage
+    private val mRequestCode: Int = Manifest.permission.RECORD_AUDIO.hashCode()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +35,6 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private val mRequestCode: Int
-        get() {
-            return Manifest.permission.RECORD_AUDIO.hashCode()
-        }
 
     /**
      * 绑定空间事件
@@ -57,16 +54,16 @@ class MainActivity : AppCompatActivity() {
         binding.start.setOnClickListener {
             when (status) {
                 PREPARE -> {
-                    recorderManage.prepare()
-                    recorderManage.start()
+                    targetManage.prepare()
+                    targetManage.start()
                 }
-                RECORDING -> recorderManage.pause()
-                PAUSE -> recorderManage.resume()
+                RECORDING -> targetManage.pause()
+                PAUSE -> targetManage.resume()
             }
         }
 
         binding.stop.setOnClickListener {
-            recorderManage.stop()
+            targetManage.stop()
         }
 
 
@@ -74,9 +71,8 @@ class MainActivity : AppCompatActivity() {
 
     private fun initRecorder() {
         Toast.makeText(this, "已经获取录音权限了", Toast.LENGTH_SHORT).show()
-        recorder = Recorder.plugin(this).build()
-        recorderManage = recorder.aac()
-        recorderManage.listener(object : OnRecorderListener {
+        val recorder = Recorder.plugin(this).build().aac()
+        targetManage.listener(object : OnRecorderListener {
             override fun onRecorderStatus(status: Int) {
                 this@MainActivity.status = status
                 when (status) {

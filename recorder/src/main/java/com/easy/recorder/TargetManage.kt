@@ -40,7 +40,7 @@ class TargetManage(private val audioTarget: AudioTarget) {
     }
 
     fun close() {
-        audioTarget.
+//        audioTarget./
     }
 
 

@@ -129,7 +129,6 @@ class AacTarget(private val builder: Builder, private val audioSource: AacAudioS
     }
 
     override fun close() {
-        TODO("Not yet implemented")
         mMediaRecorder.reset()
     }
 }
