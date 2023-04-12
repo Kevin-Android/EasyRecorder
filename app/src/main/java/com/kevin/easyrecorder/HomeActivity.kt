@@ -20,8 +20,13 @@ class HomeActivity : AppCompatActivity() {
 
     private fun binds() {
         binding.goRecordingBut.setOnClickListener {
-            startActivity(Intent(this, MainActivity::class.java))
+//            startActivity(Intent(this, MainActivity::class.java))
+            binding.goRecordingBut.hideMotionSpec
+
         }
 
     }
+
+
+
 }
